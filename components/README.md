@@ -34,16 +34,16 @@ clone repo 後，在 PowerShell 執行：
 
 | id | 內容 |
 |---|---|
-| core | DSH 0.2.0-rc.2、繁中修補、Node.js 與離線 npm 相依 |
-| browser | Playwright MCP、Chromium、headless shell 與輔助執行檔 |
-| rtl | 官方 OSS CAD Suite Windows x64 2026-10-13 安裝包 |
-| office-python | Python 3.11 安裝器、cocotb 與 Office/PDF wheels |
-| microsoft365 | PowerShell 7.6.7、Microsoft Graph 六組模組 |
-| github-tools | GitHub MCP、GitHub CLI、PortableGit |
-| dsh-web-search-free | 網頁搜尋外掛 1.8.0 |
-| dsh-desktop-token-usage | Token 統計外掛 0.1.6 |
-| dsh-what-changed | 檔案變更外掛 0.4.1 |
-| dsh-todo-guard | 待辦檢查外掛 0.1.0 |
+| [core](https://github.com/caseykcc0124/deepseek-harness-workhorse/releases/download/offline-win-x64-20261014/core-win-x64-20261014.zip) | DSH 0.2.0-rc.2、繁中修補、Node.js 與離線 npm 相依 |
+| [browser](https://github.com/caseykcc0124/deepseek-harness-workhorse/releases/download/offline-win-x64-20261014/browser-win-x64-20261014.zip) | Playwright MCP、Chromium、headless shell 與輔助執行檔 |
+| [rtl](https://github.com/caseykcc0124/deepseek-harness-workhorse/releases/download/offline-win-x64-20261014/oss-cad-suite-windows-x64-20261013.tgz) | 官方 OSS CAD Suite Windows x64 2026-10-13 安裝包 |
+| [office-python](https://github.com/caseykcc0124/deepseek-harness-workhorse/releases/download/offline-win-x64-20261014/office-python-win-x64-20261014.zip) | Python 3.11 安裝器、cocotb 與 Office/PDF wheels |
+| [microsoft365](https://github.com/caseykcc0124/deepseek-harness-workhorse/releases/download/offline-win-x64-20261014/microsoft365-win-x64-20261014.zip) | PowerShell 7.6.7、Microsoft Graph 六組模組 |
+| [github-tools](https://github.com/caseykcc0124/deepseek-harness-workhorse/releases/download/offline-win-x64-20261014/github-tools-win-x64-20261014.zip) | GitHub MCP、GitHub CLI、PortableGit |
+| [dsh-web-search-free](https://github.com/caseykcc0124/deepseek-harness-workhorse/releases/download/offline-win-x64-20261014/dsh-web-search-free-1.8.0.tgz) | 網頁搜尋外掛 1.8.0 |
+| [dsh-desktop-token-usage](https://github.com/caseykcc0124/deepseek-harness-workhorse/releases/download/offline-win-x64-20261014/dsh-desktop-token-usage-0.1.6.tgz) | Token 統計外掛 0.1.6 |
+| [dsh-what-changed](https://github.com/caseykcc0124/deepseek-harness-workhorse/releases/download/offline-win-x64-20261014/dsh-what-changed-0.4.1.tgz) | 檔案變更外掛 0.4.1 |
+| [dsh-todo-guard](https://github.com/caseykcc0124/deepseek-harness-workhorse/releases/download/offline-win-x64-20261014/dsh-todo-guard-0.1.0.tgz) | 待辦檢查外掛 0.1.0 |
 
 外掛可單獨下載，前提是你已有相容的 Harness 環境。其餘工具元件預設帶入 core，便於取得共用的離線還原腳本。core 同時保留鎖定相依的可選平台安裝包以避免缺件，因此體積較大；這次已驗證的目標仍是 Windows x64。
 
