@@ -12,6 +12,10 @@
 
 Microsoft 365 帳號、GitHub MCP、Playwright、EDA 工具鏈與外掛尚未在此專案啟用。這些是下一階段整合項目，詳見 [能力與安裝順序](docs/capabilities.md)。
 
+Windows x64 的離線材料已另行下載並測試；搬移方式見 [離線說明](offline/README.md)，來源與雜湊見 [材料鎖定清單](offline/materials.lock.json)，測試範圍見 [驗證紀錄](offline/verification.json)。大型安裝檔不在 Git 原始碼中；只 clone 此 repo 不會取得離線材料，需完整複製原機的 `DSH-offline-win-x64` 資料夾。
+
+也可以使用 [按需下載工具](components/README.md)，從 GitHub Releases 只取得需要的元件；支援單一外掛、RTL、瀏覽器、Office、Microsoft 365，或一次取得全部。下載與啟用是分開的步驟。
+
 ## Windows 安裝
 
 先安裝官方 Node.js（含 npm）與 Git，再執行：

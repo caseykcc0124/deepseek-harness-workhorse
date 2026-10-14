@@ -1,0 +1,62 @@
+{
+  "target": "Windows x64 / CPython 3.11",
+  "npm_core_restore": {
+    "status": "PASS",
+    "mode": "npm ci --offline",
+    "installed_packages": 539,
+    "localization_tests": 2
+  },
+  "npm_playwright_restore": {
+    "status": "PASS",
+    "mode": "npm ci --offline",
+    "installed_packages": 3
+  },
+  "browser": {
+    "status": "PASS",
+    "test": "bundled Chromium launch, local HTML button interaction; no external URL"
+  },
+  "python": {
+    "status": "PASS",
+    "mode": "pip install --no-index --find-links",
+    "test": "DOCX/PPTX/XLSX create/reopen; cocotb and PyMuPDF import"
+  },
+  "office_render": {
+    "status": "PASS",
+    "backend": "native LibreOffice Kit 0.1.5",
+    "test": "DOCX to PDF",
+    "missing_fonts": [
+      "Courier"
+    ]
+  },
+  "github_mcp": {
+    "status": "PASS",
+    "version": "2.0.2",
+    "test": "version command only",
+    "authenticated": false
+  },
+  "microsoft_graph": {
+    "status": "PASS",
+    "version": "2.41.1",
+    "modules": [
+      "Authentication",
+      "Mail",
+      "Calendar",
+      "Files",
+      "Sites",
+      "Teams"
+    ],
+    "test": "local module import only",
+    "authenticated": false
+  },
+  "rtl": {
+    "verilator_lint": "PASS",
+    "icarus_simulation": "PASS: all 4 input combinations",
+    "yosys_synthesis": "PASS",
+    "symbiyosys": "PASS: smtbmc z3 basecase + k-induction",
+    "scope": "synthetic combinational AND-gate smoke test, not a real project sign-off"
+  },
+  "python_installer_signature": "Valid (Windows Authenticode)",
+  "full_network_disconnection_tested": false,
+  "cloud_accounts_enabled": false,
+  "optional_plugins_enabled": false
+}

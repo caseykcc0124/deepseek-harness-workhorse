@@ -1,0 +1,122 @@
+{
+  "schema_version": 1,
+  "platform": "windows-x64",
+  "release": "offline-win-x64-20261014",
+  "components": [
+    {
+      "id": "core",
+      "label": "Harness 核心、繁中、Node、npm 相依",
+      "kind": "zip",
+      "dependencies": [],
+      "file": "core-win-x64-20261014.zip",
+      "bytes": 624627696,
+      "sha256": "542ea41742b7779b90769103f8669befc37061bf4b00466eeeda38b37b2d71a6",
+      "url": "https://github.com/caseykcc0124/deepseek-harness-workhorse/releases/download/offline-win-x64-20261014/core-win-x64-20261014.zip"
+    },
+    {
+      "id": "browser",
+      "label": "Playwright MCP 與 Chromium 瀏覽器",
+      "kind": "zip",
+      "dependencies": [
+        "core"
+      ],
+      "file": "browser-win-x64-20261014.zip",
+      "bytes": 333969829,
+      "sha256": "ea59bab565e7487f61f14064c548b1bf75b20beaf9289268a83089d69ff94f97",
+      "url": "https://github.com/caseykcc0124/deepseek-harness-workhorse/releases/download/offline-win-x64-20261014/browser-win-x64-20261014.zip"
+    },
+    {
+      "id": "rtl",
+      "label": "Verilator、Yosys、SymbiYosys 等 RTL 工具鏈",
+      "kind": "file",
+      "dependencies": [
+        "core"
+      ],
+      "file": "oss-cad-suite-windows-x64-20261013.tgz",
+      "bytes": 603340296,
+      "sha256": "d1bad77b4c2323275a657a385479ca82f1c4a4b3eab80f77a7bfd19f16433cdf",
+      "url": "https://github.com/caseykcc0124/deepseek-harness-workhorse/releases/download/offline-win-x64-20261014/oss-cad-suite-windows-x64-20261013.tgz",
+      "destination": "installers/oss-cad-suite-windows-x64-20261013.tgz"
+    },
+    {
+      "id": "office-python",
+      "label": "cocotb 與 Word/Excel/PowerPoint/PDF Python 套件",
+      "kind": "zip",
+      "dependencies": [
+        "core"
+      ],
+      "file": "office-python-win-x64-20261014.zip",
+      "bytes": 73746061,
+      "sha256": "08b89f88e1e8d6f1c5e34a18df1888ec05d9410d720a9f19447070767afd274e",
+      "url": "https://github.com/caseykcc0124/deepseek-harness-workhorse/releases/download/offline-win-x64-20261014/office-python-win-x64-20261014.zip"
+    },
+    {
+      "id": "microsoft365",
+      "label": "PowerShell 與 Microsoft Graph 六組模組",
+      "kind": "zip",
+      "dependencies": [
+        "core"
+      ],
+      "file": "microsoft365-win-x64-20261014.zip",
+      "bytes": 191260565,
+      "sha256": "91efaee638a2ca3d2f4c10fb4aff57a7ee3d2bab8eff4ca62e0b5114dbe91195",
+      "url": "https://github.com/caseykcc0124/deepseek-harness-workhorse/releases/download/offline-win-x64-20261014/microsoft365-win-x64-20261014.zip"
+    },
+    {
+      "id": "github-tools",
+      "label": "GitHub MCP、GitHub CLI、PortableGit",
+      "kind": "zip",
+      "dependencies": [
+        "core"
+      ],
+      "file": "github-tools-win-x64-20261014.zip",
+      "bytes": 84968510,
+      "sha256": "44573bd5e3763fe0941524a5e74156d9a3395c116caa168865832978f632d7a5",
+      "url": "https://github.com/caseykcc0124/deepseek-harness-workhorse/releases/download/offline-win-x64-20261014/github-tools-win-x64-20261014.zip"
+    },
+    {
+      "id": "dsh-web-search-free",
+      "label": "網頁搜尋外掛",
+      "kind": "file",
+      "dependencies": [],
+      "file": "dsh-web-search-free-1.8.0.tgz",
+      "bytes": 76887,
+      "sha256": "1893974a286c2732c4c003b0081ee7c72c91b36881f46a284f0c30f730ff89f3",
+      "url": "https://github.com/caseykcc0124/deepseek-harness-workhorse/releases/download/offline-win-x64-20261014/dsh-web-search-free-1.8.0.tgz",
+      "destination": "plugins/dsh-web-search-free-1.8.0.tgz"
+    },
+    {
+      "id": "dsh-desktop-token-usage",
+      "label": "Token 統計外掛",
+      "kind": "file",
+      "dependencies": [],
+      "file": "dsh-desktop-token-usage-0.1.6.tgz",
+      "bytes": 700967,
+      "sha256": "759a88ff9fa5094bf8a6093008322ebcff2a3747ec5b3298be65b719768b4f1d",
+      "url": "https://github.com/caseykcc0124/deepseek-harness-workhorse/releases/download/offline-win-x64-20261014/dsh-desktop-token-usage-0.1.6.tgz",
+      "destination": "plugins/dsh-desktop-token-usage-0.1.6.tgz"
+    },
+    {
+      "id": "dsh-what-changed",
+      "label": "檔案差異外掛",
+      "kind": "file",
+      "dependencies": [],
+      "file": "dsh-what-changed-0.4.1.tgz",
+      "bytes": 20583,
+      "sha256": "ead70143e5c4af98351f6054d414c42b028329f9ac79d713d401b2365406ead2",
+      "url": "https://github.com/caseykcc0124/deepseek-harness-workhorse/releases/download/offline-win-x64-20261014/dsh-what-changed-0.4.1.tgz",
+      "destination": "plugins/dsh-what-changed-0.4.1.tgz"
+    },
+    {
+      "id": "dsh-todo-guard",
+      "label": "待辦檢查外掛",
+      "kind": "file",
+      "dependencies": [],
+      "file": "dsh-todo-guard-0.1.0.tgz",
+      "bytes": 5988,
+      "sha256": "a1014aa8f5f108f00cc7e60d45f599e4083e40ad8224901eaf27160618221ec2",
+      "url": "https://github.com/caseykcc0124/deepseek-harness-workhorse/releases/download/offline-win-x64-20261014/dsh-todo-guard-0.1.0.tgz",
+      "destination": "plugins/dsh-todo-guard-0.1.0.tgz"
+    }
+  ]
+}
