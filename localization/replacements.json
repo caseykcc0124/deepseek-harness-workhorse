@@ -1,0 +1,30 @@
+[
+  [
+    "const LOCALE_IDS = [\"zh\", \"en\"];",
+    "const LOCALE_IDS = [\"zh\", \"en\", \"zh-TW\"];"
+  ],
+  [
+    "const BUILT_IN_LOCALE_METADATA = {",
+    "const BUILT_IN_LOCALE_METADATA = {\n \"zh-TW\": { label: \"繁體中文（台灣）\", fallback: \"zh\" },"
+  ],
+  [
+    "label: \"中文\",",
+    "label: \"简体中文\","
+  ],
+  [
+    "if (typeof text === \"string\") return text;",
+    "if (typeof text === \"string\") return this.snapshot.active === \"zh-TW\" ? dshZhTw(text) : text;"
+  ],
+  [
+    "return this.fallbackChain(this.snapshot.active).reduceRight((resolved, locale) => text[localeKey(locale)] ?? resolved, text.en);",
+    "const resolved = this.fallbackChain(this.snapshot.active).reduceRight((resolved, locale) => text[localeKey(locale)] ?? resolved, text.en);\n return this.snapshot.active === \"zh-TW\" ? dshZhTw(resolved) : resolved;"
+  ],
+  [
+    "const template = this.lookup(ns, key, chain) ?? (ns !== \"common\" ? this.lookup(\"common\", key, chain) : void 0) ?? key;",
+    "const original = this.lookup(ns, key, chain) ?? (ns !== \"common\" ? this.lookup(\"common\", key, chain) : void 0) ?? key;\n const template = this.snapshot.active === \"zh-TW\" ? dshZhTw(original) : original;"
+  ],
+  [
+    "const requested = localeKey(tag);",
+    "const requested = localeKey(tag);\n if (/^zh-(?:tw|hant(?:-|$)|hk|mo)/.test(requested)) return \"zh-TW\";"
+  ]
+]

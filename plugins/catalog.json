@@ -1,0 +1,119 @@
+[
+  {
+    "name": "dsh-web-search-free",
+    "version": "1.8.0",
+    "purpose": "網頁搜尋與網頁擷取",
+    "bytes": 76887,
+    "sha256": "1893974a286c2732c4c003b0081ee7c72c91b36881f46a284f0c30f730ff89f3",
+    "npm_integrity": "sha512-imH83uuWQYeJBoDcNvpDfJkO9bbnGbSJ2jeseFAgLL+p5LKpuP1EMW/rEED/EgS3GOpIIobvp44v9tHOJwCxxQ==",
+    "integrity_verified": true,
+    "bundle_patch": "cordis.patch.yml",
+    "engines": {},
+    "peerDependencies": {
+      "@deepseek-ai/cordis": "^4.0.1"
+    },
+    "dependencies": {
+      "@deepseek-ai/schemastery": "^3.18.3"
+    },
+    "scripts": {
+      "build": "node -e \"require('node:fs').rmSync('dist',{recursive:true,force:true})\" && tsc -p tsconfig.json && tsc -p tsconfig.client.json && node wrap-client.cjs",
+      "check": "node scripts/check-package.cjs",
+      "prepublishOnly": "pnpm run build && pnpm run check"
+    },
+    "repository": {
+      "url": "git+https://github.com/MochiNek0/dsh-web-search-free.git",
+      "type": "git"
+    },
+    "status": "recommended_optional_not_enabled",
+    "runtime_tested": false
+  },
+  {
+    "name": "dsh-desktop-token-usage",
+    "version": "0.1.6",
+    "purpose": "Token 用量統計看板",
+    "bytes": 700967,
+    "sha256": "759a88ff9fa5094bf8a6093008322ebcff2a3747ec5b3298be65b719768b4f1d",
+    "npm_integrity": "sha512-yC+asmPGM3w+q1Eiqbiqa0aGsr2HQFw6mEdy7IL9u1LGcLyKKI+MvSNnS8eNP24LejW7srOjZUtZNobbVmMJHA==",
+    "integrity_verified": true,
+    "bundle_patch": "cordis.patch.yml",
+    "engines": {
+      "node": ">=22",
+      "dsh": "^0.1.7-rc.2 || ^0.2.0-rc.1"
+    },
+    "peerDependencies": {},
+    "dependencies": {
+      "@deepseek-ai/schemastery": "^3.18.3"
+    },
+    "scripts": {
+      "test": "node --test \"test/*.test.mjs\"",
+      "test:package": "node scripts/verify-package.mjs",
+      "verify": "npm test && npm run test:package",
+      "prepublishOnly": "npm test"
+    },
+    "repository": {
+      "url": "git+https://github.com/jd04063221/dsh-desktop-token-usage.git",
+      "type": "git"
+    },
+    "status": "recommended_optional_not_enabled",
+    "runtime_tested": false
+  },
+  {
+    "name": "dsh-what-changed",
+    "version": "0.4.1",
+    "purpose": "對話中檔案變更與差異檢視",
+    "bytes": 20583,
+    "sha256": "ead70143e5c4af98351f6054d414c42b028329f9ac79d713d401b2365406ead2",
+    "npm_integrity": "sha512-FCXaCVF77gabKU7brgd+nXk/dMY0ZRmJct7IXVcBOY3z8oD6NgJlAwP57f0VRW9NhlWzq7ELzUAJsD5o963xPA==",
+    "integrity_verified": true,
+    "bundle_patch": "cordis.patch.yml",
+    "engines": {
+      "node": "^22.19.0 || >=24.0.0"
+    },
+    "peerDependencies": {
+      "react": "^18.2.0"
+    },
+    "dependencies": {
+      "zod": "^4.4.3"
+    },
+    "scripts": {
+      "build": "node scripts/build.mjs",
+      "prepare": "node scripts/build.mjs",
+      "test": "vitest run",
+      "typecheck": "tsc -p . --noEmit"
+    },
+    "repository": {
+      "url": "git+https://github.com/sjh9714/dsh-what-changed.git",
+      "type": "git"
+    },
+    "status": "recommended_optional_not_enabled",
+    "runtime_tested": false
+  },
+  {
+    "name": "dsh-todo-guard",
+    "version": "0.1.0",
+    "purpose": "待辦進度保存與完成證據檢查",
+    "bytes": 5988,
+    "sha256": "a1014aa8f5f108f00cc7e60d45f599e4083e40ad8224901eaf27160618221ec2",
+    "npm_integrity": "sha512-AMUUk8LVE/DtXqq5Bys4UMRxUITeei0NJ5LEUjFvO+mvxESohTrjsTJO8F9+YrbHc8yMEaH+P1T7O2B7JzPytQ==",
+    "integrity_verified": true,
+    "bundle_patch": "cordis.patch.yml",
+    "engines": {
+      "node": ">=20"
+    },
+    "peerDependencies": {
+      "@deepseek-ai/cordis": ">=4.0.1",
+      "@deepseek-ai/dsh-llm": ">=0.1.0-rc.6",
+      "@deepseek-ai/dsh-session-projection": ">=0.1.0-rc.6",
+      "@deepseek-ai/schemastery": ">=3.0.0"
+    },
+    "dependencies": {},
+    "scripts": {},
+    "repository": {
+      "url": "git+https://github.com/wxlei2004/dsh-plugins.git",
+      "type": "git",
+      "directory": "packages/dsh-todo-guard"
+    },
+    "status": "recommended_optional_not_enabled",
+    "runtime_tested": false
+  }
+]

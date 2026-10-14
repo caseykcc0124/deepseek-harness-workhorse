@@ -1,0 +1,6 @@
+{
+  "dsh_version": "0.2.0-rc.2",
+  "original_sha256": "bad8fe9bfb07af2a60c80933be65ceafdaab5386f404fb264401c7e540a36e16",
+  "source": "https://github.com/deepseek-ai/deepseek-harness",
+  "conversion": "OpenCC s2twp with local Taiwan terminology overrides"
+}

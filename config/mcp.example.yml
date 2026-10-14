@@ -1,0 +1,15 @@
+# Example only: not loaded automatically. Review authentication before use.
+# DSH uses Cordis rows, not the mcpServers JSON format from other hosts.
+- id: mcp-github
+  name: '@deepseek-ai/dsh-mcp-client'
+  config:
+    serverName: github
+    transport: streamable-http
+    url: https://api.githubcopilot.com/mcp/
+    headers:
+      Authorization: !!js '`Bearer ${process.env.GITHUB_MCP_TOKEN}`'
+
+# Replace command/args with a reviewed, version-pinned local Playwright MCP
+# installation. Do not use a floating @latest in a persistent environment.
+# Microsoft 365 requires an actual authorized MCP endpoint or a Graph bridge;
+# there is intentionally no fabricated universal Microsoft 365 server URL here.
