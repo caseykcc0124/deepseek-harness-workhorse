@@ -2,6 +2,19 @@
 
 將 DeepSeek Harness 配置為軟體開發、RTL 驗證與 OA 工作的工作馬。這是可重建的安裝與設定專案，不是 DeepSeek 官方分支；不把 node_modules、執行環境二進位檔、私人資料或壓縮包提交到 Git。
 
+## 文件入口
+
+| 你要做什麼 | 說明 |
+|---|---|
+| 第一次安裝、啟動、設定語言與模型 | [主程式安裝說明](docs/INSTALL.md) |
+| 目的地不能下載套件 | [準備材料與離線搬移](docs/INSTALL.md#b-準備離線材料) |
+| 挑選單一外掛或工具元件 | [按需下載清單與連結](components/README.md) |
+| 安裝、驗證、停用或移除外掛 | [外掛下載及安裝說明](docs/PLUGINS.md) |
+| 開發軟體、RTL、Office／Microsoft 365 要選什麼 | [能力與安裝順序](docs/capabilities.md) |
+| 查已下載來源、雜湊和實測範圍 | [材料清單](offline/materials.lock.json)／[驗證紀錄](offline/verification.json) |
+
+建議順序：**安裝 core → 啟動並設定模型 → 下載所需元件 → 安裝或配置 → 驗證功能**。下載成功、安裝成功、功能已啟用是不同狀態。若目標機不能下載，先在準備電腦取得材料，再搬移。
+
 ## 目前已提供
 
 - 鎖定 DSH `0.2.0-rc.2`，透過 package-lock.json 保存 npm 相依版本。
@@ -41,6 +54,16 @@ Setup 從 npm 下載相依套件，需要網路，並會執行套件的安裝腳
 | dsh-todo-guard | 0.1.0 | 待辦進度與完成證據檢查 |
 
 `npm run plugins:download` 會重新取得並驗證安裝包。只下載外掛本體，不是完整離線相依環境；各外掛的執行相容性尚待逐項測試。安裝後可能影響工作流程，建議逐一驗證再保留。
+
+已完成線上 Setup 的 repo 環境，可從 repo 根目錄管理外掛：
+
+```powershell
+.\plugins\Plugin.ps1 -Action List
+.\plugins\Plugin.ps1 -Action Add -Package dsh-what-changed@0.4.1
+.\Start.cmd
+```
+
+Add 預設會把 bundle 選入 profile；需要暫停使用時在側邊欄「外掛」停用。管理離線材料環境必須指定 -OfflineRoot；離線安裝外掛還需對應 profile 與 pnpm store。完整步驟、驗證及移除指令見 [外掛說明](docs/PLUGINS.md)，不要直接把一個 tgz 視為完整離線安裝環境。
 
 ## 驗證與更新
 
